@@ -1,11 +1,14 @@
 {
-    "name": "react-tailwindcss-datepicker",
+    "name": "react-tailwindcss-datepicker-roc-year",
     "version": "2.0.0",
-    "description": "A modern React Datepicker using Tailwind CSS 3",
+    "description": "A modern React Datepicker with ROC year using Tailwind CSS 3",
     "main": "dist/index.cjs.js",
     "module": "dist/index.esm.js",
     "types": "dist/index.d.ts",
     "author": "onesine",
+    "contributors": [
+        "benebsiny"
+    ],
     "license": "MIT",
     "scripts": {
         "watch": "rollup -c -w",
@@ -20,7 +23,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/onesine/react-tailwindcss-datepicker"
+        "url": "https://github.com/benebsiny/react-tailwindcss-datepicker-roc-year"
     },
     "keywords": [
         "react-tailwindcss-datepicker",

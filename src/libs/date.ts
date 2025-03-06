@@ -504,6 +504,14 @@ export function dateIsBetween(
     );
 }
 
+export function rocDateFormat(date: DateType) {
+    if (!dateIsValid(date)) return null;
+
+    const parseDate = dayjs(date);
+    const rocYear = parseDate.year() - 1911;
+    return rocYear.toString() + "-" + parseDate.format("-MM-DD").substring(1);
+}
+
 export function dateFormat(date: DateType, format: string, local = "en") {
     if (!dateIsValid(date)) return null;
 

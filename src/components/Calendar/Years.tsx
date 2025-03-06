@@ -58,7 +58,7 @@ const Years = (props: Props) => {
                         (maxYear !== null && item > maxYear) || (minYear !== null && item < minYear)
                     }
                 >
-                    <>{item}</>
+                    <>{`${item - 1911}`}</>
                 </RoundedButton>
             ))}
         </div>

@@ -16,7 +16,6 @@ import {
 import DatepickerContext from "../contexts/DatepickerContext";
 import useOnClickOutside from "../hooks";
 import {
-    dateFormat,
     dateIsAfter,
     dateIsSameOrAfter,
     dateIsSameOrBefore,
@@ -25,7 +24,8 @@ import {
     dateUpdateYear,
     firstDayOfMonth,
     nextMonthBy,
-    previousMonthBy
+    previousMonthBy,
+    rocDateFormat
 } from "../libs/date";
 import { Period, DatepickerType, ColorKeys, DateType } from "../types";
 
@@ -224,10 +224,8 @@ const Datepicker = (props: DatepickerType) => {
                 });
 
                 setInputText(
-                    `${dateFormat(value.startDate, displayFormat, i18n)}${
-                        asSingle
-                            ? ""
-                            : ` ${separator} ${dateFormat(value.endDate, displayFormat, i18n)}`
+                    `${rocDateFormat(value.startDate)}${
+                        asSingle ? "" : ` ${separator} ${rocDateFormat(value.endDate)}`
                     }`
                 );
             }

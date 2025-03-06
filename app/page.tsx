@@ -29,12 +29,12 @@ export default function Playground() {
     const [asSingle, setAsSingle] = useState(false);
     const [placeholder, setPlaceholder] = useState("");
     const [separator, setSeparator] = useState("~");
-    const [i18n, setI18n] = useState("en");
+    const [i18n, setI18n] = useState("zh-tw");
     const [disabled, setDisabled] = useState(false);
     const [inputClassName, setInputClassName] = useState("");
     const [containerClassName, setContainerClassName] = useState("");
     const [toggleClassName, setToggleClassName] = useState("");
-    const [displayFormat, setDisplayFormat] = useState("YYYY-MM-DD");
+    const [displayFormat, setDisplayFormat] = useState("YYY-MM-DD");
     const [readOnly, setReadOnly] = useState(false);
     const [minDate, setMinDate] = useState("");
     const [maxDate, setMaxDate] = useState("");

@@ -1,4 +1,4 @@
-# React Tailwindcss Datepicker
+# React Tailwindcss Datepicker with 民國年
 
 <p align="center">
     <a href="https://react-tailwindcss-datepicker.vercel.app/" target="_blank">
@@ -13,6 +13,20 @@
 [![npm downloads](https://img.shields.io/npm/dt/react-tailwindcss-datepicker?style=flat-square)](https://www.npmjs.com/package/react-tailwindcss-datepicker)
     
 </div>
+
+## 民國年 Edition
+
+此 Datepicker 使用民國年顯示。本套件內部仍然使用西元年來處理日期，因此無論是設定`onChange`或是`minDate`等等的參數請依舊使用西元年作業。
+
+![ROC Year](./assets/img/Screen_Shot_2025-03-06_at_17.49.50_roc_year.png)
+
+
+## 安裝
+```shell
+npm install "https://github.com/benebsiny/react-tailwindcss-datepicker-roc-year"
+```
+
+---
 
 ## Contents
 
