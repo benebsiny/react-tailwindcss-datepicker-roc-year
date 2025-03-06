@@ -1,15 +1,18 @@
 {
-    "name": "react-tailwindcss-datepicker",
+    "name": "react-tailwindcss-datepicker-roc-year",
     "version": "1.7.3",
-    "description": "A modern React Datepicker using Tailwind CSS 3",
+    "description": "A modern React Datepicker with ROC year using Tailwind CSS 3",
     "main": "dist/index.cjs.js",
     "module": "dist/index.esm.js",
     "types": "dist/index.d.ts",
     "author": "onesine",
+    "contributors": [
+        "benebsiny"
+    ],
     "license": "MIT",
     "scripts": {
         "watch": "rollup -c -w",
-        "clean": "rm -rf dist .rollup.cache tsconfig.tsbuildinfo",
+        "clean": "rimraf dist .rollup.cache tsconfig.tsbuildinfo",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
         "pret": "prettier -c .",
@@ -19,11 +22,11 @@
         "build": "npm run code-style && npm run clean && rollup -c rollup.config.js --bundleConfigAsCjs",
         "pub": "npm run build && npm publish",
         "dev": "next dev -p 8888",
-        "prepare": "husky"
+        "prepare": "npm run build"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/onesine/react-tailwindcss-datepicker"
+        "url": "https://github.com/benebsiny/react-tailwindcss-datepicker-roc-year"
     },
     "keywords": [
         "react-tailwindcss-datepicker",
@@ -68,6 +71,7 @@
         "prettier": "^3.3.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "rimraf": "^6.0.1",
         "rollup": "^4.20.0",
         "tailwindcss": "^3.4.10",
         "tslib": "^2.6.3",

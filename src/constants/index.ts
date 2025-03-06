@@ -25,9 +25,9 @@ export const DEFAULT_COLOR: ColorKeys = "blue";
 
 export const DEFAULT_SEPARATOR = "~";
 
-export const LANGUAGE = "en";
+export const LANGUAGE = "zh-tw";
 
-export const DATE_FORMAT = "YYYY-MM-DD";
+export const DATE_FORMAT = "YYY-MM-DD";
 
 export const START_WEEK: WeekStringType = "sun";
 

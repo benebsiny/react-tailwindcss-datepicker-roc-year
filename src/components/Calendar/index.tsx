@@ -283,7 +283,7 @@ const Calendar = (props: Props) => {
                                 hideMonths();
                             }}
                         >
-                            <>{date.getFullYear()}</>
+                            <>{date.getFullYear() - 1911}</>
                         </RoundedButton>
                     </div>
                 </div>
