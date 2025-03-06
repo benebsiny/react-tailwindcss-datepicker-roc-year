@@ -19,7 +19,7 @@
         "pret:fix": "prettier --ignore-path .gitignore --config ./.prettierrc --write './**/*.{js,jsx,ts,tsx,css,md,json}'",
         "code-style": "npm run pret && npm run lint",
         "code-style:fix": "npm run pret:fix && npm run pret:fix",
-        "build": "npm run code-style && npm run clean && rollup -c rollup.config.js --bundleConfigAsCjs",
+        "build": "npm run clean && rollup -c rollup.config.js --bundleConfigAsCjs",
         "pub": "npm run build && npm publish",
         "dev": "next dev -p 8888",
         "prepare": "npm run build"
