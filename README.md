@@ -26,6 +26,19 @@
 npm install "github:benebsiny/react-tailwindcss-datepicker-roc-year#v1.7.3r"
 ```
 
+## Tailwindcss 設定檔
+```javascript
+// in your tailwind.config.js
+module.exports = {
+    // ...
+    content: [
+        "./src/**/*.{js,jsx,ts,tsx}",
+        "./node_modules/react-tailwindcss-datepicker-roc-year/dist/index.esm.js"
+    ]
+    // ...
+};
+```
+
 ---
 
 ## Contents
