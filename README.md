@@ -23,7 +23,7 @@
 
 ## 安裝
 ```shell
-npm install "github:benebsiny/react-tailwindcss-datepicker-roc-year#v1.7.3r"
+npm install "github:benebsiny/react-tailwindcss-datepicker-roc-year#v1.7.3-fork.1"
 ```
 
 ## Tailwindcss 設定檔
