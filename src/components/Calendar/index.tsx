@@ -65,6 +65,7 @@ const Calendar = (props: Props) => {
     const [showMonths, setShowMonths] = useState(false);
     const [showYears, setShowYears] = useState(false);
     const [year, setYear] = useState(date.getFullYear());
+    const [month, setMonth] = useState(date.getMonth());
 
     // Functions
     const hideMonths = useCallback(() => {
@@ -205,6 +206,7 @@ const Calendar = (props: Props) => {
     // UseEffects & UseLayoutEffect
     useEffect(() => {
         setYear(date.getFullYear());
+        setMonth(date.getMonth());
     }, [date]);
 
     // Variables
@@ -271,6 +273,12 @@ const Calendar = (props: Props) => {
                                 setShowMonths(!showMonths);
                                 hideYears();
                             }}
+                            onScrollUp={() => {
+                                changeMonth(month + 1 + 1);
+                            }}
+                            onScrollDown={() => {
+                                changeMonth(month - 1 + 1);
+                            }}
                         >
                             {dateFormat(date, "MMM", i18n)}
                         </RoundedButton>
@@ -281,6 +289,12 @@ const Calendar = (props: Props) => {
                             onClick={() => {
                                 setShowYears(!showYears);
                                 hideMonths();
+                            }}
+                            onScrollUp={() => {
+                                changeYear(year + 1);
+                            }}
+                            onScrollDown={() => {
+                                changeYear(year - 1);
                             }}
                         >
                             <>{date.getFullYear() - 1911}年</>

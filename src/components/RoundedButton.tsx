@@ -1,4 +1,4 @@
-import { useCallback, useContext } from "react";
+import { useCallback, useContext, useEffect, useRef } from "react";
 
 import { BUTTON_COLOR } from "../constants";
 import DatepickerContext from "../contexts/DatepickerContext";
@@ -8,6 +8,8 @@ const RoundedButton = (props: ButtonProps) => {
     const {
         children,
         onClick,
+        onScrollUp,
+        onScrollDown,
         disabled,
         roundedFull = false,
         padding = "py-[0.55rem]",
@@ -31,8 +33,37 @@ const RoundedButton = (props: ButtonProps) => {
         return `${defaultClass} ${buttonFocusColor} ${disabledClass}`;
     }, [disabled, padding, primaryColor, roundedFull, active]);
 
+    const btn = useRef<HTMLButtonElement>(null);
+    useEffect(() => {
+        if (!btn.current || (!onScrollUp && !onScrollDown)) {
+            return;
+        }
+        const handleWheel = (e: WheelEvent) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (e.deltaY > 0) {
+                onScrollDown?.();
+            } else {
+                onScrollUp?.();
+            }
+        };
+
+        btn.current.addEventListener("wheel", handleWheel, { passive: false });
+
+        return () => {
+            btn.current?.removeEventListener("wheel", handleWheel);
+        };
+    }, [btn, onScrollUp, onScrollDown]);
+
     return (
-        <button type="button" className={getClassName()} onClick={onClick} disabled={disabled}>
+        <button
+            type="button"
+            className={getClassName()}
+            onClick={onClick}
+            ref={btn}
+            disabled={disabled}
+        >
             {children}
         </button>
     );

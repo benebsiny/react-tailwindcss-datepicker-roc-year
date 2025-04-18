@@ -109,6 +109,8 @@ export interface IconProps {
 export interface ButtonProps {
     children: ReactNode;
     onClick: MouseEventHandler<HTMLButtonElement>;
+    onScrollUp?: () => void;
+    onScrollDown?: () => void;
     disabled?: boolean;
     roundedFull?: boolean;
     padding?: string;
