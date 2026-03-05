@@ -45,7 +45,7 @@ const Years = (props: Props) => {
     }, [dateLooking, year]);
 
     return (
-        <div className="w-full grid grid-cols-2 gap-2 mt-2">
+        <div className="w-full grid grid-cols-2 gap-2 mt-2" data-testid="datepicker-years">
             {generateArrayNumber(date.start, date.end).map((item, index) => (
                 <RoundedButton
                     key={index}

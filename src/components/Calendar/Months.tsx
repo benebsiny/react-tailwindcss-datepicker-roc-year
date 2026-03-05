@@ -20,7 +20,7 @@ const Months = (props: Props) => {
     }, [i18n]);
 
     return (
-        <div className="w-full grid grid-cols-2 gap-2 mt-2">
+        <div className="w-full grid grid-cols-2 gap-2 mt-2" data-testid="datepicker-months">
             {MONTHS.map(item => (
                 <RoundedButton
                     key={item}

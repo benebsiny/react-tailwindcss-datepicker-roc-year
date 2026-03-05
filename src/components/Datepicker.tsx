@@ -392,7 +392,7 @@ const Datepicker = (props: DatepickerType) => {
             <div className={containerClassNameOverload} ref={containerRef}>
                 <Input setContextRef={setInputRef} />
 
-                <div className={popupClassNameOverload} ref={calendarContainerRef}>
+                <div className={popupClassNameOverload} ref={calendarContainerRef} data-testid="datepicker">
                     <Arrow ref={arrowRef} />
 
                     <div className="mt-2.5 shadow-sm border border-gray-300 px-1 py-0.5 bg-white dark:bg-slate-800 dark:text-white dark:border-slate-600 rounded-lg">

@@ -295,7 +295,7 @@ const Days = (props: Props) => {
     );
 
     return (
-        <div className="grid grid-cols-7 gap-y-0.5 my-1">
+        <div className="grid grid-cols-7 gap-y-0.5 my-1" data-testid="datepicker-days">
             {days.previous.map((item, index) => (
                 <button
                     type="button"

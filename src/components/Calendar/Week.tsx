@@ -37,7 +37,7 @@ const Week = () => {
     }, [startWeekOn]);
 
     return (
-        <div className="grid grid-cols-7 border-b border-gray-300 dark:border-gray-700 py-2">
+        <div className="grid grid-cols-7 border-b border-gray-300 dark:border-gray-700 py-2" data-testid="datepicker-week">
             {DAYS.map(item => (
                 <div key={item} className="tracking-wide text-gray-500 text-center">
                     {ucFirst(

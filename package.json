@@ -1,6 +1,6 @@
 {
     "name": "react-tailwindcss-datepicker-roc-year",
-    "version": "1.7.3",
+    "version": "1.7.3-fork.3",
     "description": "A modern React Datepicker with ROC year using Tailwind CSS 3",
     "main": "dist/index.cjs.js",
     "module": "dist/index.esm.js",
